@@ -10,7 +10,7 @@ import java.util.Date;
  *
  * @author chmov
  */
-public class Client {
+public class User {
     private int id;
     private String nome;
     private char sexo;
@@ -18,32 +18,13 @@ public class Client {
     private String telefone;
     private String email;
     private String rg;
-    private String endereco;
-    private String cep;
+    private String senha;
+    private String nivelAcesso;
 
-    public Client(int id, String nome, char sexo, String telefone, String endereco) {
+    public User(int id, String nome, String senha) {
         this.id = id;
         this.nome = nome;
-        this.sexo = sexo;
-        this.telefone = telefone;
-        this.endereco = endereco;
-             
-    }
-    
-    public Client(int id, String nome, String telefone, String endereco) {
-        this.id = id;
-        this.nome = nome;
-        this.telefone = telefone;
-        this.endereco = endereco;
-    }
-    
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        this.senha = senha;
     }
 
     public String getNome() {
@@ -94,22 +75,26 @@ public class Client {
         this.rg = rg;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getSenha() {
+        return senha;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
-    public String getCep() {
-        return cep;
+    public String getNivelAcesso() {
+        return nivelAcesso;
     }
 
-    public void setCep(String cep) {
-        this.cep = cep;
+    public void setNivelAcesso(String nivelAcesso) {
+        this.nivelAcesso = nivelAcesso;
     }
 
 
+    
+    
+    
+    
     
 }
