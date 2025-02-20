@@ -10,36 +10,36 @@ import java.util.Date;
  *
  * @author chmov
  */
-public class User extends Pessoa {
+public class User extends Person {
 
-    protected String senha;
-    protected String nivelAcesso;
+    protected String password;
+    protected String accessLevel;
 
     public User(int id, String nome, String senha) {
         super(id, nome);
-        this.senha = senha;
+        this.password = senha;
     }
 
-    public User(String senha, String nivelAcesso, int id, String nome, char sexo, Date dataNascimento, String telefone, String email, String rg) {
-        super(id, nome, sexo, dataNascimento, telefone, email, rg);
-        this.senha = senha;
-        this.nivelAcesso = nivelAcesso;
+    public User(String password, String accessLevel, int id, String name, char gender, String birthDate, String telephone, String email, String rg) {
+        super(id, name, gender, birthDate, telephone, email, rg);
+        this.password = password;
+        this.accessLevel = accessLevel;
     }
 
     public String getSenha() {
-        return senha;
+        return password;
     }
 
     public void setSenha(String senha) {
-        this.senha = senha;
+        this.password = senha;
     }
 
     public String getNivelAcesso() {
-        return nivelAcesso;
+        return accessLevel;
     }
 
     public void setNivelAcesso(String nivelAcesso) {
-        this.nivelAcesso = nivelAcesso;
+        this.accessLevel = nivelAcesso;
     }
     
     

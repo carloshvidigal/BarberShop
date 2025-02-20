@@ -10,29 +10,29 @@ import java.util.Date;
  *
  * @author chmov
  */
-public class Client extends Pessoa{
+public class Client extends Person{
 
-    private String endereco;
+    private String address;
     private String cep;
 
-    public Client(String endereco, String cep, int id, String nome, char sexo, Date dataNascimento, String telefone, String email, String rg) {
-        super(id, nome, sexo, dataNascimento, telefone, email, rg);
-        this.endereco = endereco;
+    public Client(String address, String cep, int id, String name, char gender, String birthDate, String telephone, String email, String rg) {
+        super(id, name, gender, birthDate, telephone, email, rg);
+        this.address = address;
         this.cep = cep;
     }
 
     public Client(int id, String nome, String endereco, String cep) {
         super(id, nome);
-        this.endereco = endereco;
+        this.address = endereco;
         this.cep = cep;
     }
     
-    public String getEndereco() {
-        return endereco;
+    public String getAddress() {
+        return address;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setAddress(String endereco) {
+        this.address = endereco;
     }
 
     public String getCep() {

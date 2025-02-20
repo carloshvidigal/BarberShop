@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package View;
+import Model.Booking;
 import Model.Service;
 import Model.Client;
 import Model.User;
@@ -27,6 +28,7 @@ public class Main {
         System.out.println(user.getNome());
         
         
+        Booking booking = new Booking(1, client, service, 30, "25/02/2025 14:00");
         
                 
         

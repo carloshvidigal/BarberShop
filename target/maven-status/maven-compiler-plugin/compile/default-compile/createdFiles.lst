@@ -1,12 +1,13 @@
-View\Schedule.class
+Model\Booking.class
 Model\Service.class
-Model\User.class
 View\MainMenu$2.class
 Model\Client.class
-View\MainMenu$1.class
 View\MainMenu.class
 View\Schedule$1.class
-Model\Pessoa.class
 View\Login$1.class
 View\Login.class
 View\Main.class
+View\Schedule.class
+Model\Person.class
+Model\User.class
+View\MainMenu$1.class
