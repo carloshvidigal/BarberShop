@@ -4,17 +4,25 @@
  */
 package View;
 
+import Controller.LoginController;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author chmov
  */
 public class Login extends javax.swing.JFrame {
 
+    private final LoginController controller;
+
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        controller = new LoginController(this);
     }
 
     /**
@@ -44,6 +52,11 @@ public class Login extends javax.swing.JFrame {
         jToggleButton1.setBackground(new java.awt.Color(182, 56, 56));
         jToggleButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jToggleButton1.setText("Entrar");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, -1, -1));
 
         PasswordField.setBackground(new java.awt.Color(204, 204, 204));
@@ -69,6 +82,13 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // TODO add your handling code here:
+        this.controller.showAlert();
+        System.out.println(UserField.getText());
+        System.out.println(PasswordField.getText());
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -115,4 +135,26 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel UserLabel;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
+
+    public void showAlert(String message) {
+        JOptionPane.showMessageDialog(null, message);
+    }
+
+    public JPasswordField getPasswordField() {
+        return PasswordField;
+    }
+
+    public void setPasswordField(JPasswordField PasswordField) {
+        this.PasswordField = PasswordField;
+    }
+
+    public JTextField getUserField() {
+        return UserField;
+    }
+
+    public void setUserField(JTextField UserField) {
+        this.UserField = UserField;
+    }
+    
+    
 }

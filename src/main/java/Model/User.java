@@ -15,9 +15,9 @@ public class User extends Person {
     protected String password;
     protected String accessLevel;
 
-    public User(int id, String nome, String senha) {
-        super(id, nome);
-        this.password = senha;
+    public User(int id, String name, String password) {
+        super(id, name);
+        this.password = password;
     }
 
     public User(String password, String accessLevel, int id, String name, char gender, String birthDate, String telephone, String email, String rg) {
@@ -26,20 +26,20 @@ public class User extends Person {
         this.accessLevel = accessLevel;
     }
 
-    public String getSenha() {
+    public String getPassword() {
         return password;
     }
 
-    public void setSenha(String senha) {
-        this.password = senha;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getNivelAcesso() {
+    public String getAccessLevel() {
         return accessLevel;
     }
 
-    public void setNivelAcesso(String nivelAcesso) {
-        this.accessLevel = nivelAcesso;
+    public void setAccessLevel(String accessLevel) {
+        this.accessLevel = accessLevel;
     }
     
     

@@ -22,10 +22,10 @@ public class Main {
         System.out.println(service.getValue());
         
         Client client = new Client(1, "CH", "Rua Teste 12", "1223313");
-        System.out.println(client.getNome());
+        System.out.println(client.getName());
         
         User user = new User(1, "CH", "1234");
-        System.out.println(user.getNome());
+        System.out.println(user.getName());
         
         
         Booking booking = new Booking(1, client, service, 30, "25/02/2025 14:00");

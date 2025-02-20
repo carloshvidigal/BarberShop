@@ -1,4 +1,5 @@
 Model\Booking.class
+View\Login$2.class
 Model\Service.class
 View\MainMenu$2.class
 Model\Client.class
@@ -11,3 +12,4 @@ View\Schedule.class
 Model\Person.class
 Model\User.class
 View\MainMenu$1.class
+Controller\LoginController.class

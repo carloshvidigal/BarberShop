@@ -23,9 +23,9 @@ abstract public class Person {
     protected String email;
     protected String rg;
 
-    public Person(int id, String nome) {
+    public Person(int id, String name) {
         this.id = id;
-        this.name = nome;
+        this.name = name;
     }
 
     public Person(int id, String name, char gender, String birthDate, String telephone, String email, String rg) {
@@ -50,36 +50,36 @@ abstract public class Person {
         this.id = id;
     }
 
-    public String getNome() {
+    public String getName() {
         return name;
     }
 
-    public void setNome(String nome) {
-        this.name = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public char getSexo() {
+    public char getGender() {
         return gender;
     }
 
-    public void setSexo(char sexo) {
-        this.gender = sexo;
+    public void setGender(char gender) {
+        this.gender = gender;
     }
 
     public Date getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date dataNascimento) {
-        this.birthDate = dataNascimento;
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
     public String getTelephone() {
         return telephone;
     }
 
-    public void setTelephone(String telefone) {
-        this.telephone = telefone;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
     public String getEmail() {
@@ -98,8 +98,5 @@ abstract public class Person {
         this.rg = rg;
     }
     
-    
-
-    
-    
+   
 }
