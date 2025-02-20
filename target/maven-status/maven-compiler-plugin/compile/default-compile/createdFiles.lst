@@ -6,6 +6,7 @@ Model\Client.class
 View\MainMenu$1.class
 View\MainMenu.class
 View\Schedule$1.class
+Model\Pessoa.class
 View\Login$1.class
 View\Login.class
 View\Main.class

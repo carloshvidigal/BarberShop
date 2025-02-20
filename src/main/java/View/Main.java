@@ -20,11 +20,11 @@ public class Main {
         System.out.println(service.getDescription());
         System.out.println(service.getValue());
         
-        Client client = new Client(1, "CH", 'M', "93939393", "Rua Mar de Morros, 94" );
-        System.out.println(client);
+        Client client = new Client(1, "CH", "Rua Teste 12", "1223313");
+        System.out.println(client.getNome());
         
-        User user = new User(1, "Barber", "1234");
-        System.out.println(user);
+        User user = new User(1, "CH", "1234");
+        System.out.println(user.getNome());
         
         
         
