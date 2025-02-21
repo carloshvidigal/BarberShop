@@ -95,9 +95,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
-        this.controller.showAlert();
-        System.out.println(UserField.getText());
-        System.out.println(PasswordField.getText());
+        this.controller.executeLogin();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**

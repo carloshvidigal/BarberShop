@@ -8,6 +8,7 @@ import Controller.Helper.LoginHelper;
 import Model.DAO.UsuarioDAO;
 import Model.User;
 import View.Login;
+import View.MainMenu;
 
 /**
  *
@@ -24,14 +25,26 @@ public class LoginController {
     }
     
     public void executeLogin() {
+        
+        //get user from view
         User user = helper.getModel();
+        
+        //Search user in database
         UsuarioDAO userDAO = new UsuarioDAO();
-
+        User authenticatedUser =  userDAO.selectPorNomeESenha(user);
+        
+        if (authenticatedUser != null ) {
+            MainMenu menu = new MainMenu();
+            menu.setVisible(true);
+            this.view.dispose();
+            
+        }else {
+            view.showAlert("Invalid Username or Password!");
+        }
+     
         
 
     }
     
-    public void showAlert(){        
-        this.view.showAlert("Alert");
-    }
+
 }

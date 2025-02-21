@@ -1,6 +1,13 @@
+C:\Netbeans Projects\BarberShop\src\main\java\Controller\Helper\LoginHelper.java
 C:\Netbeans Projects\BarberShop\src\main\java\Controller\LoginController.java
+C:\Netbeans Projects\BarberShop\src\main\java\Controller\MainMenuController.java
 C:\Netbeans Projects\BarberShop\src\main\java\Model\Booking.java
 C:\Netbeans Projects\BarberShop\src\main\java\Model\Client.java
+C:\Netbeans Projects\BarberShop\src\main\java\Model\DAO\AgendamentoDAO.java
+C:\Netbeans Projects\BarberShop\src\main\java\Model\DAO\Banco.java
+C:\Netbeans Projects\BarberShop\src\main\java\Model\DAO\ClienteDAO.java
+C:\Netbeans Projects\BarberShop\src\main\java\Model\DAO\ServicoDAO.java
+C:\Netbeans Projects\BarberShop\src\main\java\Model\DAO\UsuarioDAO.java
 C:\Netbeans Projects\BarberShop\src\main\java\Model\Person.java
 C:\Netbeans Projects\BarberShop\src\main\java\Model\Service.java
 C:\Netbeans Projects\BarberShop\src\main\java\Model\User.java

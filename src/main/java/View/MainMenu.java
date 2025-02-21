@@ -4,17 +4,22 @@
  */
 package View;
 
+import Controller.MainMenuController;
+
 /**
  *
  * @author chmov
  */
 public class MainMenu extends javax.swing.JFrame {
 
+    private final MainMenuController controller;
+
     /**
      * Creates new form MainMenu
      */
     public MainMenu() {
         initComponents();
+        this.controller = new MainMenuController(this);
     }
 
     /**
@@ -29,31 +34,41 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         Cadastro = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        ClientMenuItem = new javax.swing.JMenuItem();
+        ServiceMenuItem = new javax.swing.JMenuItem();
+        Navigate = new javax.swing.JMenu();
+        BookingMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Netbeans Projects\\BarberShop\\src\\main\\java\\View\\Images\\MainMenuBackground - Baixa Transparencia.png")); // NOI18N
 
-        Cadastro.setText("Cadastro");
+        Cadastro.setText("Register");
 
-        jMenuItem1.setText("Client");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        ClientMenuItem.setText("Client");
+        ClientMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                ClientMenuItemActionPerformed(evt);
             }
         });
-        Cadastro.add(jMenuItem1);
+        Cadastro.add(ClientMenuItem);
 
-        jMenuItem2.setText("Service");
-        Cadastro.add(jMenuItem2);
+        ServiceMenuItem.setText("Service");
+        Cadastro.add(ServiceMenuItem);
 
         jMenuBar1.add(Cadastro);
 
-        jMenu2.setText("Operação");
-        jMenuBar1.add(jMenu2);
+        Navigate.setText("Navigate");
+
+        BookingMenuItem.setText("Booking");
+        BookingMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BookingMenuItemActionPerformed(evt);
+            }
+        });
+        Navigate.add(BookingMenuItem);
+
+        jMenuBar1.add(Navigate);
 
         setJMenuBar(jMenuBar1);
 
@@ -71,9 +86,14 @@ public class MainMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void ClientMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClientMenuItemActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_ClientMenuItemActionPerformed
+
+    private void BookingMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BookingMenuItemActionPerformed
+        // TODO add your handling code here:
+        this.controller.openSchedule();
+    }//GEN-LAST:event_BookingMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,11 +131,12 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem BookingMenuItem;
     private javax.swing.JMenu Cadastro;
+    private javax.swing.JMenuItem ClientMenuItem;
+    private javax.swing.JMenu Navigate;
+    private javax.swing.JMenuItem ServiceMenuItem;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     // End of variables declaration//GEN-END:variables
 }

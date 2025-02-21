@@ -6,28 +6,38 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="Cadastro">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Cadastro"/>
+            <Property name="text" type="java.lang.String" value="Register"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+            <MenuItem class="javax.swing.JMenuItem" name="ClientMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Client"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ClientMenuItemActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+            <MenuItem class="javax.swing.JMenuItem" name="ServiceMenuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Service"/>
               </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu2">
+        <Menu class="javax.swing.JMenu" name="Navigate">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Opera&#xe7;&#xe3;o"/>
+            <Property name="text" type="java.lang.String" value="Navigate"/>
           </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="BookingMenuItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Booking"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BookingMenuItemActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
         </Menu>
       </SubComponents>
     </Menu>
