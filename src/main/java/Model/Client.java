@@ -15,7 +15,7 @@ public class Client extends Person{
     private String address;
     private String cep;
 
-    public Client(String address, String cep, int id, String name, char gender, String birthDate, String telephone, String email, String rg) {
+    public Client(int id, String name, char gender, String birthDate, String telephone, String email, String rg, String address, String cep) {
         super(id, name, gender, birthDate, telephone, email, rg);
         this.address = address;
         this.cep = cep;

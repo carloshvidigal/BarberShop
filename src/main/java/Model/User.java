@@ -20,7 +20,7 @@ public class User extends Person {
         this.password = password;
     }
 
-    public User(String password, String accessLevel, int id, String name, char gender, String birthDate, String telephone, String email, String rg) {
+    public User(int id, String name, char gender, String birthDate, String telephone, String email, String rg, String password, String accessLevel) {
         super(id, name, gender, birthDate, telephone, email, rg);
         this.password = password;
         this.accessLevel = accessLevel;

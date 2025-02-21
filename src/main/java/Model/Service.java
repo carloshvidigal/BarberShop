@@ -34,6 +34,15 @@ public class Service {
     public void setValue(float value) {
         this.value = value;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     
     
     

@@ -28,6 +28,12 @@ public class LoginHelper {
     
     public void setModel(User user){
         String name = user.getName();
+        String password = user.getPassword();
+        
+        view.getUserField().setText(name);
+        view.getPasswordField().setText(password);
+        
+        
     }
     
 }
