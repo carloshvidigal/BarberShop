@@ -72,6 +72,15 @@ public class Booking {
     public Date getDate() {
         return date;
     }
+    
+    public String getFormattedDate() {
+        return new SimpleDateFormat("dd/MM/yyyy").format(date);
+    }
+    
+     public String getFormattedHour() {
+        return new SimpleDateFormat("HH:mm").format(date);
+
+    }
 
     public void setDate(Date date) {
         this.date = date;

@@ -23,7 +23,6 @@ public class MainMenuController {
         Schedule schedule = new Schedule();
         schedule.setVisible(true);
         
-        
     }
      
      
