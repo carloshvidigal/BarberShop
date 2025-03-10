@@ -5,8 +5,11 @@
 package Controller.Helper;
 
 import Model.Booking;
+import Model.Client;
+import Model.Service;
 import View.Schedule;
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -42,6 +45,28 @@ public class ScheduleHelper {
                
            });
        }
+    }
+
+    public void updateClients(ArrayList<Client> clients) {
+
+       DefaultComboBoxModel comboBoxClientModel =  (DefaultComboBoxModel) view.getClientCombo().getModel();
+       
+
+       for(Client client : clients) {
+           
+           comboBoxClientModel.addElement(client);
+       }
+    }
+
+    public void updateServices(ArrayList<Service> services) {
+   
+       DefaultComboBoxModel comboBoxServiceModel =  (DefaultComboBoxModel) view.getServiceCombo().getModel();
+        
+       for(Service service : services) {
+           
+           comboBoxServiceModel.addElement(service);
+       }
+        
     }
     
     

@@ -43,6 +43,10 @@ public class Client extends Person{
         this.cep = cep;
     }
 
+    @Override
+    public String toString(){
+        return getName();
+    }
 
 
     

@@ -28,7 +28,7 @@
     <Component class="javax.swing.JTextField" name="HourField">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="170" y="250" width="120" height="20"/>
+          <AbsoluteConstraints x="170" y="250" width="220" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -38,7 +38,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="350" y="110" width="460" height="130"/>
+          <AbsoluteConstraints x="410" y="110" width="460" height="130"/>
         </Constraint>
       </Constraints>
 
@@ -90,7 +90,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="540" y="90" width="-1" height="-1"/>
+          <AbsoluteConstraints x="610" y="80" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -109,7 +109,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="490" y="250" width="150" height="-1"/>
+          <AbsoluteConstraints x="580" y="250" width="150" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -127,16 +127,19 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="DateField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DateFieldActionPerformed"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="170" y="220" width="120" height="20"/>
+          <AbsoluteConstraints x="170" y="220" width="220" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="ValueField">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="170" y="190" width="120" height="20"/>
+          <AbsoluteConstraints x="170" y="190" width="220" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -169,11 +172,7 @@
     <Component class="javax.swing.JComboBox" name="ServiceCombo">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="3">
-            <StringItem index="0" value="Hair"/>
-            <StringItem index="1" value="Beard"/>
-            <StringItem index="2" value="Hair + Beard"/>
-          </StringArray>
+          <StringArray count="0"/>
         </Property>
       </Properties>
       <AuxValues>
@@ -181,7 +180,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="170" y="160" width="120" height="-1"/>
+          <AbsoluteConstraints x="170" y="160" width="220" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -214,19 +213,18 @@
     <Component class="javax.swing.JComboBox" name="ClientCombo">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="3">
-            <StringItem index="0" value="Josh"/>
-            <StringItem index="1" value="Paul"/>
-            <StringItem index="2" value="Lenny"/>
-          </StringArray>
+          <StringArray count="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ClientComboActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="170" y="130" width="120" height="-1"/>
+          <AbsoluteConstraints x="170" y="130" width="220" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -259,7 +257,7 @@
     <Component class="javax.swing.JTextField" name="IdField">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="170" y="100" width="120" height="20"/>
+          <AbsoluteConstraints x="170" y="100" width="220" height="20"/>
         </Constraint>
       </Constraints>
     </Component>

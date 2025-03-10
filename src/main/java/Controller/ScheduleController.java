@@ -6,7 +6,11 @@ package Controller;
 
 import Controller.Helper.ScheduleHelper;
 import Model.Booking;
+import Model.Client;
 import Model.DAO.AgendamentoDAO;
+import Model.DAO.ClienteDAO;
+import Model.DAO.ServicoDAO;
+import Model.Service;
 import View.Schedule;
 import java.util.ArrayList;
 
@@ -35,6 +39,30 @@ public class ScheduleController {
         helper.updateTable(bookingList); 
         
     }
+    
+    public void updateClient() {
+        
+        //Search for clients in database
+        ClienteDAO clientDAO = new ClienteDAO(); 
+        ArrayList<Client> clients = clientDAO.selectAll();
+        
+                
+        //Display clients in Combobox Client
+        helper.updateClients(clients);
+    }
+    
+        public void updateService() {
+        
+        //Search for services in database
+        ServicoDAO serviceDAO = new ServicoDAO(); 
+        ArrayList<Service> services = serviceDAO.selectAll();
+        
+                
+        //Display clients in Combobox Client
+        helper.updateServices(services);
+        
+    }
+    
     
     
     

@@ -11,6 +11,7 @@ Model\DAO\AgendamentoDAO.class
 Model\DAO\Banco.class
 View\MainMenu$1.class
 Controller\Helper\LoginHelper.class
+View\Schedule$3.class
 View\Login$2.class
 View\MainMenu$3.class
 Controller\ScheduleController.class
@@ -18,6 +19,7 @@ Model\Client.class
 View\MainMenu.class
 Model\DAO\ClienteDAO.class
 Controller\Helper\ScheduleHelper.class
+View\Schedule$2.class
 Model\User.class
 Model\DAO\UsuarioDAO.class
 Controller\LoginController.class
