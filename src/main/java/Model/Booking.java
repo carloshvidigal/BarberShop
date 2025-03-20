@@ -33,9 +33,14 @@ public class Booking {
         } catch (ParseException ex) {
             Logger.getLogger(Booking.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-
     }
+
+    public Booking(int id, Client client, Service service, float value, String date, String note) {
+        this(id, client, service, value, date);
+        this.note = note;
+    }
+    
+    
 
     public int getId() {
         return id;

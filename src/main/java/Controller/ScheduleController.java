@@ -36,8 +36,7 @@ public class ScheduleController {
         ArrayList<Booking> bookingList = bookingDAO.selectAll();
         
         //Display this list in the view 
-        helper.updateTable(bookingList); 
-        
+        helper.updateTable(bookingList);         
     }
     
     public void updateClient() {
@@ -45,8 +44,7 @@ public class ScheduleController {
         //Search for clients in database
         ClienteDAO clientDAO = new ClienteDAO(); 
         ArrayList<Client> clients = clientDAO.selectAll();
-        
-                
+                        
         //Display clients in Combobox Client
         helper.updateClients(clients);
     }
@@ -55,14 +53,24 @@ public class ScheduleController {
         
         //Search for services in database
         ServicoDAO serviceDAO = new ServicoDAO(); 
-        ArrayList<Service> services = serviceDAO.selectAll();
-        
+        ArrayList<Service> services = serviceDAO.selectAll();       
                 
         //Display clients in Combobox Client
         helper.updateServices(services);
-        
     }
     
+        public void updateValue(){
+            Service service = helper.getService();
+            helper.setValue(service.getValue());
+        }
+
+        public void book(){
+            Booking booking = (Booking) helper.getModel();
+            new AgendamentoDAO().insert(booking);
+            updateTable();
+            helper.clearScreen();
+            
+        }
     
     
     

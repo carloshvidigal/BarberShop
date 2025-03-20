@@ -11,7 +11,7 @@ import View.Login;
  *
  * @author chmov
  */
-public class LoginHelper {
+public class LoginHelper implements IHelper {
     
     private final Login view; 
 
@@ -34,6 +34,11 @@ public class LoginHelper {
         view.getPasswordField().setText(password);
         
         
+    }
+
+    @Override
+    public void clearScreen() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

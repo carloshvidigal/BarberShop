@@ -1,6 +1,8 @@
 Model\Booking.class
 Model\Service.class
 View\MainMenu$2.class
+View\Schedule$6.class
+View\Schedule$4.class
 View\Schedule$1.class
 View\Login$1.class
 View\Login.class
@@ -16,12 +18,15 @@ View\Login$2.class
 View\MainMenu$3.class
 Controller\ScheduleController.class
 Model\Client.class
+Controller\Helper\IHelper.class
 View\MainMenu.class
 Model\DAO\ClienteDAO.class
+View\Schedule$5.class
 Controller\Helper\ScheduleHelper.class
 View\Schedule$2.class
 Model\User.class
 Model\DAO\UsuarioDAO.class
+View\Schedule$7.class
 Controller\LoginController.class
 Controller\MainMenuController.class
 Model\DAO\ServicoDAO.class

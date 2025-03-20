@@ -6,7 +6,10 @@ package View;
 
 import Controller.ScheduleController;
 import javax.swing.JComboBox;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 /**
  *
@@ -37,7 +40,7 @@ public class Schedule extends javax.swing.JFrame {
 
         HourField = new javax.swing.JTextField();
         OtherInfoTextField = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        OtherInfoTextArea = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         OtherInfoLabel = new javax.swing.JLabel();
@@ -61,11 +64,11 @@ public class Schedule extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(HourField, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 220, 20));
+        getContentPane().add(HourField, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 220, 30));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        OtherInfoTextField.setViewportView(jTextArea1);
+        OtherInfoTextArea.setColumns(20);
+        OtherInfoTextArea.setRows(5);
+        OtherInfoTextField.setViewportView(OtherInfoTextArea);
 
         getContentPane().add(OtherInfoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 460, 130));
 
@@ -82,7 +85,7 @@ public class Schedule extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 820, 190));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 820, 180));
 
         OtherInfoLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         OtherInfoLabel.setText("Other Info");
@@ -92,59 +95,80 @@ public class Schedule extends javax.swing.JFrame {
         BookButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BookButton.setForeground(new java.awt.Color(204, 204, 204));
         BookButton.setText("Book");
+        BookButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BookButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(BookButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 250, 150, -1));
 
         HourLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         HourLabel.setText("Hour");
-        getContentPane().add(HourLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, -1, -1));
+        getContentPane().add(HourLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, -1, -1));
 
         DateField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DateFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(DateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 220, 20));
-        getContentPane().add(ValueField, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 220, 20));
+        getContentPane().add(DateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 220, 30));
+        getContentPane().add(ValueField, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 220, 30));
 
         DateLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DateLabel.setText("Date");
-        getContentPane().add(DateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
+        getContentPane().add(DateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, -1, -1));
 
         ValueLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ValueLabel.setText("Value($)");
-        getContentPane().add(ValueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, -1, 20));
+        getContentPane().add(ValueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, -1, 20));
 
-        getContentPane().add(ServiceCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 220, -1));
+        ServiceCombo.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                ServiceComboItemStateChanged(evt);
+            }
+        });
+        ServiceCombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ServiceComboActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ServiceCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 162, 220, 30));
 
         ServiceLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ServiceLabel.setText("Service");
-        getContentPane().add(ServiceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
+        getContentPane().add(ServiceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, -1, -1));
 
         ClientLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ClientLabel.setText("Client");
-        getContentPane().add(ClientLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, -1, -1));
+        getContentPane().add(ClientLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, -1, -1));
 
         ClientCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ClientComboActionPerformed(evt);
             }
         });
-        getContentPane().add(ClientCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 220, -1));
+        getContentPane().add(ClientCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 220, 30));
 
         IdLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         IdLabel.setText("Id");
-        getContentPane().add(IdLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, -1, 20));
+        getContentPane().add(IdLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, 20));
 
         Schedule.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         Schedule.setText("Schedule");
         getContentPane().add(Schedule, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, -1, -1));
-        getContentPane().add(IdField, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 220, 20));
+
+        IdField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IdFieldActionPerformed(evt);
+            }
+        });
+        getContentPane().add(IdField, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 220, 30));
 
         Panel.setIcon(new javax.swing.ImageIcon("C:\\Netbeans Projects\\BarberShop\\src\\main\\java\\View\\Images\\Painel.png")); // NOI18N
-        getContentPane().add(Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 490, 250));
+        getContentPane().add(Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, 480, 290));
 
         Panel1.setIcon(new javax.swing.ImageIcon("C:\\Netbeans Projects\\BarberShop\\src\\main\\java\\View\\Images\\Painel.png")); // NOI18N
-        getContentPane().add(Panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 550, 250));
+        getContentPane().add(Panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 550, 290));
 
         Background.setIcon(new javax.swing.ImageIcon("C:\\Netbeans Projects\\BarberShop\\src\\main\\java\\View\\Images\\Schedule.png")); // NOI18N
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 490, 500));
@@ -162,6 +186,22 @@ public class Schedule extends javax.swing.JFrame {
     private void DateFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DateFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_DateFieldActionPerformed
+
+    private void ServiceComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ServiceComboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ServiceComboActionPerformed
+
+    private void ServiceComboItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ServiceComboItemStateChanged
+        this.controller.updateValue();
+    }//GEN-LAST:event_ServiceComboItemStateChanged
+
+    private void BookButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BookButtonActionPerformed
+        this.controller.book();
+    }//GEN-LAST:event_BookButtonActionPerformed
+
+    private void IdFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IdFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IdFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -211,6 +251,7 @@ public class Schedule extends javax.swing.JFrame {
     private javax.swing.JTextField IdField;
     private javax.swing.JLabel IdLabel;
     private javax.swing.JLabel OtherInfoLabel;
+    private javax.swing.JTextArea OtherInfoTextArea;
     private javax.swing.JScrollPane OtherInfoTextField;
     private javax.swing.JLabel Panel;
     private javax.swing.JLabel Panel1;
@@ -221,13 +262,13 @@ public class Schedule extends javax.swing.JFrame {
     private javax.swing.JLabel ValueLabel;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 
     private void start() {
         this.controller.updateTable();
         this.controller.updateClient();
         this.controller.updateService();
+        this.controller.updateValue();
     }
 
     public JTable getBookingTable() {
@@ -253,7 +294,50 @@ public class Schedule extends javax.swing.JFrame {
     public void setServiceCombo(JComboBox<String> ServiceCombo) {
         this.ServiceCombo = ServiceCombo;
     }
+
+    public JTextField getValueField() {
+        return ValueField;
+    }
+
+    public void setValueField(JTextField ValueField) {
+        this.ValueField = ValueField;
+    }
+
+    public JTextField getIdField() {
+        return IdField;
+    }
+
+    public void setIdField(JTextField IdField) {
+        this.IdField = IdField;
+    }
+
+    public JTextField getDateField() {
+        return DateField;
+    }
+
+    public void setDateField(JTextField DateField) {
+        this.DateField = DateField;
+    }
+
+    public JTextField getHourField() {
+        return HourField;
+    }
+
+    public void setHourField(JTextField HourField) {
+        this.HourField = HourField;
+    }
+
+    public JTextArea getOtherInfoTextArea() {
+        return OtherInfoTextArea;
+    }
+
+    public void setOtherInfoTextArea(JTextArea OtherInfoTextArea) {
+        this.OtherInfoTextArea = OtherInfoTextArea;
+    }
+
+
     
-    
-    
+
+
+        
 }
